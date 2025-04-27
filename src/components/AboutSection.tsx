@@ -1,90 +1,34 @@
 'use client'
 import React from 'react'
-import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import { Boxes } from "../components/ui/background-boxes";
+import { cn } from "@/utils/aboutMeutils/cn";
 
-export function AboutSection() {
-    const cards = data.map((card, index) => (
-        <Card key={card.src} card={card} index={index} />
-      ));
-  return (
-    <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-      <strong>Tech Stack</strong>
-      </h2>
-      <Carousel items={cards} />
-    </div>
-  )
+function AboutSection() {
+    return (
+        <div>
+            <div style={{background: "rgb(8, 8, 9)"}} className="h-96 relative w-full overflow-hidden flex flex-col items-center justify-center rounded-lg">
+                <div style={{background: "rgb(12, 13, 15)"}} className="absolute inset-0 w-full h-full z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+
+                <Boxes />
+                <h1 className={cn("md:text-4xl text-xl text-white relative z-20")}>
+                   <strong>Building the Digital Future</strong>
+                </h1>
+                <p className="text-center mt-2 text-neutral-300 relative z-20">
+                Web development is the cornerstone of the modern internet, <br /> enabling the creation of websites, applications, and digital experiences <br /> that power businesses and connect people.</p>
+                <blockquote className="mt-4 text-neutral-400 italic text-lg relative z-20">
+                "A well-designed website can elevate your brand, grow your business, and connect you with the right audience."
+                </blockquote>
+                <div className="mt-6 relative z-20 flex flex-col items-center">
+                    <a 
+                        href="mailto:your.email@example.com" 
+                        className="bg-white text-black px-6 py-2 rounded-md shadow-md hover:bg-neutral-200 transition"
+                    >
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    )
 }
 
-const DummyContent = () => {
-    return (
-      <>
-        {[...new Array(1).fill(1)].map((_, index) => {
-          return (
-            <div
-              key={"dummy-content" + index}
-              className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-            >
-              <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-                <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                  The first rule of Apple club is that you boast about Apple club.
-                </span>{" "}
-                Keep a journal, quickly jot down a grocery list, and take amazing
-                class notes. Want to convert those notes to text? No problem.
-                Langotiya jeetu ka mara hua yaar is ready to capture every
-                thought.
-              </p>
-              <img
-                src="https://assets.aceternity.com/macbook.png"
-                alt="Macbook mockup from Aceternity UI"
-                height="500"
-                width="500"
-                className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-              />
-            </div>
-          );
-        })}
-      </>
-    );
-  };
-   
-  const data = [
-    {
-      category: "Artificial Intelligence",
-      title: "You can do more with AI.",
-      src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      content: <DummyContent />,
-    },
-    {
-      category: "Productivity",
-      title: "Enhance your productivity.",
-      src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      content: <DummyContent />,
-    },
-    {
-      category: "Product",
-      title: "Launching the new Apple Vision Pro.",
-      src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      content: <DummyContent />,
-    },
-   
-    {
-      category: "Product",
-      title: "Maps for your iPhone 15 Pro Max.",
-      src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      content: <DummyContent />,
-    },
-    {
-      category: "iOS",
-      title: "Photography just got better.",
-      src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      content: <DummyContent />,
-    },
-    {
-      category: "Hiring",
-      title: "Hiring for a Staff Software Engineer",
-      src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      content: <DummyContent />,
-    },
-  ];
-
+export default AboutSection

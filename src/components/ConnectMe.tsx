@@ -1,5 +1,5 @@
-'use client'
-import React from 'react';
+"use client";
+import React from "react";
 import { motion } from "motion/react";
 import { LampContainer } from "../components/ui/lamp";
 // import { ContectFrom } from './ContectFrom';
@@ -18,11 +18,22 @@ function ConnectMe() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Contect me
+        <h3 className="pt-0">💬 Let’s Connect</h3>
+        <div className="flex flex-col mt-4 text-lg text-slate-300 max-w-xl mx-auto font-sans">
+          <p className="font-mono">
+            I’m always open to exciting opportunities, collaborations, or just a
+            friendly tech chat! 🚀
+          </p>
+          <p>
+            <strong>📩 Email:</strong> [your email]{" "}
+          </p>
+          <p>💼 LinkedIn: [your LinkedIn URL]</p>
+          <p> 🐙 GitHub: [your GitHub URL]</p>
+          <p>🌐 Portfolio: [your portfolio URL]</p>
+        </div>
       </motion.h1>
-      {/* <ContectFrom /> */}
     </LampContainer>
-  )
+  );
 }
 
-export default ConnectMe
+export default ConnectMe;
